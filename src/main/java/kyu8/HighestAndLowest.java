@@ -19,14 +19,17 @@ public class HighestAndLowest {
 
     public static String highAndLow(String numbers) {
         // Code here
-        int min = Integer.MAX_VALUE;
-        int max = Integer.MIN_VALUE;
+        int min,max;
 
-        for (String number : Arrays.asList( numbers.split(" ") ) ) {
-            int n = Integer.parseInt(number);
+        String[] number = numbers.split(" ");
+        min = max = Integer.parseInt(number[0]);
+
+        for (int i = 1; i < number.length; i++) {
+            int n = Integer.parseInt(number[i]);
             if (n < min) min = n;
             if (n > max) max = n;
         }
+
 
         return "" + max + " " + min;
     }
