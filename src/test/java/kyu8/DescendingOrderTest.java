@@ -16,9 +16,13 @@ class DescendingOrderTest {
         assertEquals(51, DescendingOrder.sortDesc(15));
     }
 
-
     @Test
     public void test_03() {
         assertEquals(987654321, DescendingOrder.sortDesc(123456789));
+    }
+
+    @Test
+    public void test_04() {
+        assertEquals(52100, DescendingOrder.sortDesc(12050));
     }
 }
