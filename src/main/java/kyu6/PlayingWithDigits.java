@@ -35,6 +35,7 @@ public class PlayingWithDigits {
         }
         return result % n == 0 ? result/n : -1;
     }
+
     private static int[] intSplitToDigit(int number){
         byte count = 0;
         int[] result = new int[10];
