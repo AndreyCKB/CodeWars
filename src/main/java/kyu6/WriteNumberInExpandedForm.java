@@ -17,13 +17,11 @@ public class WriteNumberInExpandedForm {
         if (num <= 10) return String.valueOf(num);
         StringBuilder result = new StringBuilder();
         byte[] bytes = intSplitToDigit(num);
-        int numberLength = bytes.length-1;
-        for (int i = numberLength; i > -1; i--){
+        for (int i = bytes.length-1; i > -1; i--){
             if (bytes[i] > 0) {
-                result.append((int) (bytes[i]*Math.pow(10,numberLength) ))
+                result.append((int) (bytes[i]*Math.pow(10,i) ))
                       .append(" + ");
             }
-            numberLength--;
         }
 
         return result.delete(result.length() - 3, result.length())
